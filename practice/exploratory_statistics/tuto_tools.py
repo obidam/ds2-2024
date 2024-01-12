@@ -142,9 +142,9 @@ def plot_GMMellipse(gmm, id, ik, col, ax, **kwargs):
         ellipse = nstd * ellipse + np.ones((theta.shape[0], 1)) * gmm.means_[ik, (id[0], id[1])]
         if ii == 1:
             #            p = ax.plot(ellipse[:,0], ellipse[:,1], color=col, axes=ax, label=("%s (%i-std)")%(label,nstd),**kwargs)
-            p = ax.plot(ellipse[:, 0], ellipse[:, 1], color=col, axes=ax, label=("%s") % (opts['label']), **plot_kw)
+            p = ax.plot(ellipse[:, 0], ellipse[:, 1], color=col, label=("%s") % (opts['label']), **plot_kw)
         else:
-            p = ax.plot(ellipse[:, 0], ellipse[:, 1], color=col, axes=ax, **plot_kw)
+            p = ax.plot(ellipse[:, 0], ellipse[:, 1], color=col, **plot_kw)
     if opts['main_axes']:  # Add Main axes:
         for idir in range(2):
             l = np.sqrt(d[idir, idir]) * v[:, idir].T
@@ -152,7 +152,7 @@ def plot_GMMellipse(gmm, id, ik, col, ax, **kwargs):
             endpt = gmm.means_[ik, (id[0], id[1])] + l
             linex = [start[0], endpt[0]]
             liney = [start[1], endpt[1]]
-            plt.plot(linex, liney, color=col, axes=ax, **plot_kw)
+            ax.plot(linex, liney, color=col, **plot_kw)
     return p, ax
 
 
@@ -179,7 +179,7 @@ def sns_GMMellipse(x, y, gmm=[], id=[], std=[1], main_axes=True, label="?", colo
             ellipse = np.inner(v,xy).T
             ellipse = nstd*ellipse + np.ones((theta.shape[0], 1))*gmm.means_[ik,(id[0],id[1])]
             if ii == 1:
-                plt.plot(ellipse[:,0], ellipse[:,1], color=col, label=("%s")%(label),**kwargs)
+                plt.plot(ellipse[:,0], ellipse[:,1], color=col, label=("%s")%(label), **kwargs)
             else:
                 plt.plot(ellipse[:,0], ellipse[:,1], color=col, **kwargs)
         if main_axes: # Add Main axes:
