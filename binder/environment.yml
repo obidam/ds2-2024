@@ -1,0 +1,20 @@
+name: ds2
+channels:
+  - conda-forge
+dependencies:
+  # You need the pangeo-notebook conda-forge package in your environment.yml for compatibility with pangeo cloud deployments
+  - pangeo-notebook==2023.12.17
+  # The rest of the packages are up to you!
+  - xarray
+  - hvplot
+  - gcsfs
+  - intake
+  - intake-xarray
+  - zarr
+  - cartopy
+  - scikit-learn
+  - seaborn
+  - dask-ml
+  - pip
+  - pip:
+    - httpimport
