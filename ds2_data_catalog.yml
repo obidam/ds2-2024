@@ -1,0 +1,54 @@
+plugins:
+  source:
+    - module: intake_xarray
+sources:
+    argo_global_sdl:
+      description: Global 0-2000m Standard Depth Level Argo profiles
+      driver: zarr
+      args:
+        urlpath: 'gcs://opendata_bdo2020/GLOBAL_ARGO_SDL2000'
+        storage_options:
+          project: 'alert-ground-261008'
+          token: anon
+          access: read_only
+        consolidated: False
+    argo_global_sdl_homogeneous:
+      description: Global 0-1500m Standard Depth Level Argo profiles (homogeneously distributed in space)
+      driver: zarr
+      args:
+        urlpath: 'gcs://opendata_bdo2020/GLOB_HOMOGENEOUS_variables.zarr'
+        storage_options:
+          project: 'alert-ground-261008'
+          token: anon
+          access: read_only
+        consolidated: False
+    argo_global_vertical_mean:
+      description: Global Argo profiles vertical mean temperature
+      driver: zarr
+      args:
+        urlpath: 'gcs://opendata_bdo2020/Global_Argo_VerticalMean_Temperature.zarr'
+        storage_options:
+          project: 'alert-ground-261008'
+          token: anon
+          access: read_only
+        consolidated: False
+    en4:
+      description: Global EN4 time series
+      driver: zarr
+      args:
+        urlpath: 'gcs://opendata_bdo2020/EN.4.2.1.f.analysis.g10.zarr'
+        storage_options:
+          project: 'alert-ground-261008'
+          token: anon
+          access: read_only
+        consolidated: true
+    sea_surface_height:
+      description: Sea-surface altimetry data from The Copernicus Marine Environment (monthly)
+      driver: zarr
+      args:
+        urlpath: 'gcs://opendata_bdo2020/dt_global_allsat_phy_l4_mm'
+        storage_options:
+          project: 'alert-ground-261008'
+          token: anon
+          access: read_only
+        consolidated: true
