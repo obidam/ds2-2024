@@ -125,6 +125,7 @@ def plot_GMMellipse(gmm, id, ik, col, ax, **kwargs):
         plot_kw = {**plot_kw_defaults, **opts['plot_kw']}
     else:
         plot_kw = plot_kw_defaults
+    plot_kw.pop('axes', None)
 
     #     id = [0, 1] # Dimensions id
     covariances = gmm.covariances_[ik][(id[0], id[0], id[1], id[1]), (id[0], id[1], id[0], id[1])].reshape(2, 2)
