@@ -1,10 +1,10 @@
 # 2024 Practice sessions
 
-## Pangeo Environment: Jan. 18th 2024, 9h30, B01-010
+## Pangeo Environment: Jan. 18th 2024, 9h30, B03-134
 
 This is the Pangeo-inspired Practice Session. 
 
-Class will take place in B01-010, January 18th, from 9h30 to 12h15 with Guillaume and Pierre.
+Class will take place in B03-134, January 18th, from 9h30 to 12h15 with Guillaume and Pierre.
 
 Start here with a couple of notebooks to learn the possible tools that will allow you to tackle (big) data mining in oceanography.
 
@@ -17,9 +17,9 @@ Start here with a couple of notebooks to learn the possible tools that will allo
 | Xarray | [![Binder](https://img.shields.io/static/v1.svg?logo=Jupyter&label=launch&message=MyBinder&color=blue)](https://mybinder.org/v2/gh/obidam/ds2-2024/main?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fobidam%252Fds2-2024%26urlpath%3Dlab%252Ftree%252Fds2-2024%252Fpractice%252Fenvironment%252F05-Xarray_Getting_started.ipynb) [![Colab](https://img.shields.io/static/v1?label=Google&message=Open+with+Colab&color=blue&style=plastic&logo=google-colab)](https://colab.research.google.com/github/obidam/ds2-2024/blob/main/practice/environment/05-Xarray_Getting_started.ipynb)           |
 | Convert netcdf files to zarr format | [![Binder](https://img.shields.io/static/v1.svg?logo=Jupyter&label=launch&message=MyBinder&color=blue)](https://mybinder.org/v2/gh/obidam/ds2-2024/main?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fobidam%252Fds2-2024%26urlpath%3Dlab%252Ftree%252Fds2-2024%252Fpractice%252Fenvironment%252F06-Convert_netcdf_to_zarr.ipynb) [![Colab](https://img.shields.io/static/v1?label=Google&message=Open+with+Colab&color=blue&style=plastic&logo=google-colab)](https://colab.research.google.com/github/obidam/ds2-2024/blob/main/practice/environment/06-Convert_netcdf_to_zarr.ipynb)           |
 
-## Predictive Statistics: Jan 19th, 2024, 13h45, B01-010
+## Predictive Statistics: Jan 19th, 2024, 13h45, B03-134
 
-Class will take place in B01-010 with Sally and Pierre.
+Class will take place in B03-134 with Sally and Pierre.
 
 | Practice | Open |
 |------------|:--------------|
@@ -28,9 +28,9 @@ Class will take place in B01-010 with Sally and Pierre.
 | Non-Linear regression | [![Binder](https://img.shields.io/static/v1.svg?logo=Jupyter&label=launch&message=MyBinder&color=blue)](https://mybinder.org/v2/gh/obidam/ds2-2024/main?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fobidam%252Fds2-2024%26urlpath%3Dlab%252Ftree%252Fds2-2024%252Fpractice%252Fpredictive_statistics%252F3_Nonlinear_regression_with_Support_Vector_Machines.ipynb) [![Colab](https://img.shields.io/static/v1?label=Google&message=Open+with+Colab&color=blue&style=plastic&logo=google-colab)](https://colab.research.google.com/github/obidam/ds2-2024/blob/main/practice/predictive_statistics/3_Nonlinear_regression_with_Support_Vector_Machines.ipynb) |
 | Logistic regression | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/obidam/ds2-2024/HEAD?labpath=blob%2Fmain%2Fpractice%2Fpredictive_statistics%2F4_Logistic_regression.ipynb) [![Colab](https://img.shields.io/static/v1?label=Google&message=Open+with+Colab&color=blue&style=plastic&logo=google-colab)](https://colab.research.google.com/github/obidam/ds2-2024/blob/main/practice/predictive_statistics/4_Logistic_regression.ipynb) |
 
-## Exploratory Statistics: Jan. 19th 2024, 9h30, B01-010
+## Exploratory Statistics: Jan. 19th 2024, 9h30, B03-134
 
-Class will take place in B01-010 with Guillaume and Pierre.
+Class will take place in B03-134 with Guillaume and Pierre.
 
 | Practice | Open |
 |------------|:--------------|
