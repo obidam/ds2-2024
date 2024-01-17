@@ -1,0 +1,24 @@
+name: ds2-coiled
+channels:
+  - conda-forge
+dependencies:
+  - python = 3.9
+  - xarray
+  - hvplot
+  - gcsfs
+  - intake
+  - intake-xarray
+  - zarr
+  - cartopy
+  - scikit-learn
+  - seaborn
+  - dask-ml
+  - coiled
+  - google-cloud-sdk
+  - ipykernel
+  - argopy
+  - s3fs
+  - pip
+  - pip:
+    - httpimport
+    - coiled[notebook]
