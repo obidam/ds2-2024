@@ -44,17 +44,6 @@ cluster = coiled.Cluster(n_workers=4,
 
 Cluster optimised to use all possible ressources within the free GCP quotas: 
 ```python 
-cluster = coiled.Cluster(n_workers=4, 
-                         name='free-large', 
-                         scheduler_vm_types=['n1-standard-2'],   
-                         worker_vm_types=['e2-highcpu-4'],
-                         scheduler_options={"idle_timeout": "1 hours"},
-                         shutdown_on_close=False,
-                         use_best_zone=True, 
-                         spot_policy="spot_with_fallback",
-                        )
-
-
 cluster = coiled.Cluster(n_workers=5, 
                          name='free-large', 
                          scheduler_vm_types=['n1-standard-2'],   
@@ -77,7 +66,7 @@ All Compute Engine API quota details [here](https://console.cloud.google.com/api
 
 
 ### Cluster reuse
-If you want to (re)use an existing cluster from anywhere,
+If you want to (re)use an existing cluster from anywhere:
 
 ```python
 cluster = coiled.Cluster(name="test-simple")
@@ -118,7 +107,7 @@ coiled.create_software_environment(
 coiled notebook start --sync --idle-timeout '1 hour' --vm-type n1-standard-1 --name notebook
 ```
 
-# Computation examples:
+# Computation examples
 ```python
 def inc(x):
     return x + 1
