@@ -1,8 +1,6 @@
 # 2024 Practice sessions
 
-## Pangeo Environment: Jan. 18th 2024, 9h30, B03-134
-
-This is the Pangeo-inspired Practice Session. 
+## Pangeo: Jan. 18th 2024, 9h30, B03-134
 
 Class will take place in B03-134, January 18th, from 9h30 to 12h15 with Guillaume and Pierre.
 
