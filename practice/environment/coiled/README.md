@@ -16,6 +16,8 @@ import coiled
 from dask.distributed import Client
 ```
 
+#### CPU cluster
+
 Smallest cluster possible:
 ```python
 cluster = coiled.Cluster(n_workers=1, 
@@ -42,7 +44,7 @@ cluster = coiled.Cluster(n_workers=4,
                         )
 ```
 
-Cluster optimised to use all possible ressources within the free GCP quotas: 
+Cluster optimised to use all possible ressources within the free GCP quotas:
 ```python 
 cluster = coiled.Cluster(n_workers=5, 
                          name='free-large', 
@@ -55,21 +57,21 @@ cluster = coiled.Cluster(n_workers=5,
                         )
 ```
 
-```python
-client = cluster.get_client()
-cluster.dashboard_link
-```
-
 With GCP free trial, quotas allows for 24 VM instances, 8 T2D vCPUs, 500Gb of SSD, 5 networks, 32 vCPUs (all regions)...
 
 All Compute Engine API quota details [here](https://console.cloud.google.com/apis/api/compute.googleapis.com/quotas?project=ds2-2024).
 
 
-### Cluster reuse
-If you want to (re)use an existing cluster from anywhere:
+### Cluster (re)use for Dask
+If you want to (re)use an existing cluster from anywhere, call it by its name:
 
 ```python
 cluster = coiled.Cluster(name="test-simple")
+```
+
+And to use with Dask, you need the client:
+```python
+client = cluster.get_client()
 ```
 
 ### VM Types
