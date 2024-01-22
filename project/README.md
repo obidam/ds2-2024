@@ -75,6 +75,8 @@ This dataset can be accessed this way:
 	mapper = gcs.get_mapper(zstore)
 	ds = xr.(mapper, consolidated=True)
 
-Notebook with info on the CMIP experiments and example code: [![Colab](https://img.shields.io/static/v1?label=Google&message=Open+data+with+Colab&color=blue&style=plastic&logo=google-colab)](https://colab.research.google.com/github/obidam/ds2-2024/blob/main/project/Starting_point_for_projects_7_and_8_(SC).ipynb)
+Notebook with info on the CMIP experiments and example code for project 7, future Arctic sea ice: [![Colab](https://img.shields.io/static/v1?label=Google&message=Open+data+with+Colab&color=blue&style=plastic&logo=google-colab)](https://colab.research.google.com/github/obidam/ds2-2024/blob/main/project/Information_for_project_7%2C_Future_Arctic_Sea_Ice%2C_2024.ipynb)
+
+Notebook with info on the CMIP experiments and example code for project 8, the Atlantic Multidecadal Oscillation: [![Colab](https://img.shields.io/static/v1?label=Google&message=Open+data+with+Colab&color=blue&style=plastic&logo=google-colab)](https://colab.research.google.com/github/obidam/ds2-2024/blob/main/project/Information_for_project_8%2C_the_Atlantic_Multidecadal_Oscillation.ipynb)
 ***
 <img src="https://github.com/obidam/ds2-2024/raw/main/logo_isblue.jpg">
