@@ -16,13 +16,13 @@ For that, we will :
 
 In this folder, you will find a notebook that contains : 
 
-The extraction of the data from the catalog
-A temporal comparison of 2 ice concentration scenarios in Artic
-A Kmeans clustering algorithm for sea ice concentration
-A scenarios comparison (in clustering and prediction for the year 2100)
-A model comparison (in clustering and prediction for the year 2100)
-The evolution of the size of the differents clusters
-A seasonal of the evolution of sea ice concentration
-PCA to see the evolution of the arctic sea ice
+ - The extraction of the data from the catalog
+ - A temporal comparison of 2 ice concentration scenarios in Artic
+ - A Kmeans clustering algorithm for sea ice concentration
+ - A scenarios comparison (in clustering and prediction for the year 2100)
+ - A model comparison (in clustering and prediction for the year 2100)
+ - The evolution of the size of the differents clusters
+ - A seasonal of the evolution of sea ice concentration
+ - PCA to see the evolution of the arctic sea ice
 
 <img src="https://github.com/obidam/ds2-2024/raw/main/logo_isblue.jpg">
