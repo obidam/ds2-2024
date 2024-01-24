@@ -6,7 +6,7 @@ In the project, we study the daily mean SST in the equatorial Pacific. The corre
 
 ## Project organization
  * [Code implementation](./project01.ipynb): Notebook contains Python code for loading the SST data from Google Cloud, preprocessing in the appropriate format, and implementing the algorithms (PCA, Multiple Linear Regression).
- * [Presentation](./project01.ppt): Brief piece showing the gained results.
+ * [Presentation](./project01.pdf): Brief piece showing the gained results.
 
 ## Result Demo
 ![Result Demo](./Demo.jpg "Time series and maps of pattern by applying 5 components in PCA method.")
