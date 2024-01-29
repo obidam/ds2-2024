@@ -54,6 +54,7 @@ cluster = coiled.Cluster(n_workers=5,
                          shutdown_on_close=False,
                          use_best_zone=True, 
                          spot_policy="spot_with_fallback",
+                         #software='ds2-coiled',
                         )
 ```
 
@@ -106,8 +107,65 @@ coiled.create_software_environment(
 ### Jupyter notebook
 
 ```bash
-coiled notebook start --sync --idle-timeout '1 hour' --vm-type n1-standard-1 --name notebook
+coiled notebook start --sync --idle-timeout '1 hour' --vm-type n1-standard-1 --name notebook --software ds2-coiled
 ```
+
+### Using DS2 GCP project:
+
+The quota is of 72 CPUs in us-east1 region. So, if we use 2 CPUs for the scheduler, we're left with 70 CPUs to be distributed among the workers. That's gibing us the choice of using few VMs with a lot of CPUs, or a lot of VMs with a few CPUs.
+
+A lot of workers with only 2 CPUs/core:
+```python 
+cluster = coiled.Cluster(n_workers=35, 
+                         name='ds2-cluster', 
+                         scheduler_vm_types=['n1-standard-2'],   
+                         worker_vm_types=['n1-standard-2'],
+                         scheduler_options={"idle_timeout": "1 hours"},
+                         shutdown_on_close=False,
+                         use_best_zone=True, 
+                         spot_policy="spot_with_fallback",
+                        )
+
+cluster = coiled.Cluster(n_workers=10, 
+                         name='ds2-cluster', 
+                         scheduler_vm_types=['n1-standard-2'],   
+                         worker_vm_types=['n1-standard-2'],
+                         scheduler_options={"idle_timeout": "1 hours"},
+                         shutdown_on_close=False,
+                         use_best_zone=True, 
+                         spot_policy="spot_with_fallback",
+                        )
+```
+
+Or a few workers with a lot of CPUs:
+```python 
+cluster = coiled.Cluster(n_workers=2, 
+                         name='ds2-cluster', 
+                         scheduler_vm_types=['n1-standard-2'],   
+                         worker_vm_types=['n1-standard-32'],
+                         scheduler_options={"idle_timeout": "1 hours"},
+                         shutdown_on_close=False,
+                         use_best_zone=True, 
+                         spot_policy="spot_with_fallback",
+                        )
+```
+
+Performances should depend on the kind of tasks submitted to these clusters.
+
+
+A Cluster of 8 GPUs-VM workers, providing 8*8=64 CPUs:
+```python 
+cluster = coiled.Cluster(n_workers=8, 
+                         name='ds2-cluster-gpu', 
+                         scheduler_vm_types=['n1-standard-2'],   
+                         worker_vm_types=['g2-standard-8'],
+                         scheduler_options={"idle_timeout": "1 hours"},
+                         shutdown_on_close=False,
+                         use_best_zone=True, 
+                         spot_policy="spot_with_fallback",
+                        )
+```
+
 
 # Computation examples
 ```python
@@ -123,3 +181,4 @@ x = da.random.normal(10, 0.1, size=(20000,20000), chunks= (1000,1000))
 y = x.mean(axis=0)[::100]
 y.compute();
 ```
+

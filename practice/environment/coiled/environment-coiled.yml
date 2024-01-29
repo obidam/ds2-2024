@@ -18,6 +18,7 @@ dependencies:
   - ipykernel
   - argopy
   - s3fs
+  - xarrayutils
   - pip
   - pip:
     - httpimport
